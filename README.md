@@ -1,0 +1,4 @@
+# PHP array_map unexpected behavior with non-numeric arrays
+This example demonstrates an uncommon error that can occur when using PHP's `array_map` function.  The issue arises when the function within `array_map` attempts to perform mathematical operations on non-numeric array elements.  This can lead to warnings and unexpected results.
+
+The `bug.php` file contains a function `foo` that doubles each element in an array using `array_map`. While it works fine with numeric arrays, it generates a warning and unexpected output with non-numeric arrays.  The `bugSolution.php` file addresses this by adding type checking within the anonymous function to handle non-numeric values gracefully.
